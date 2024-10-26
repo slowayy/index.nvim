@@ -6,9 +6,7 @@ app.add_handler(
   "GET",
   "/",
   function()
-    return "{\"date\":\"23\",\"user\":\"fc165869-9125-4674-bb46-ac6d0bd308ec\"}", {
-      ["Content-Type"] = "text/json"
-    }
+    
   end
 
 )
