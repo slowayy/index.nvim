@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "name": "index.nvim",
+  "version": "0.0.1",
+  "description": "WebServer to count users of Neovim",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slowayy/index.nvim.git"
+  },
+  "keywords": [
+    "neovim",
+    "express",
+    "index"
+  ],
+  "author": "Slowayy_",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/slowayy/index.nvim/issues"
+  },
+  "homepage": "https://github.com/slowayy/index.nvim#readme"
+}
