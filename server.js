@@ -5,7 +5,7 @@ const port = 3020
 
 server.use(express.json());
 server.get("/", (req, res) => {
-  res.status(200).send("OK!")
+  res.status(200).send("OK!") && console.log("OK!")
 })
 
 server.post("/useradd", (req, res) => {

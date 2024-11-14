@@ -1,16 +1,17 @@
-local app = require("milua")
-local usr = io.open("active-users.lua", "a+")
-io.output(usr)
+local http = require("socket.http")
+local ltn12 = require("ltn12")
 
-app.add_handler("POST", "/useradd", function()
-	return io.write(""), {
-		["Content-Type"] = "text/json",
-	}
-end)
+-- The Request Bin test URL: http://requestb.in/12j0kaq1
+function sendRequest()
+	local path = "localhost:3020/"
+	local payload = [[ {"key":"My Key","name":"My Name","description":"The description","state":1} ]]
+	local response_body = {}
 
-local config = {
-	HOST = "127.0.0.1",
-	PORT = "9213",
-}
-
-app.start(config)
+	local res, code, response_headers, status = http.request({
+		url = path,
+		method = "GET",
+		headers = {},
+		source = ltn12.source.string(payload),
+		sink = ltn12.sink.table(response_body),
+	})
+end
