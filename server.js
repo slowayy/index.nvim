@@ -10,9 +10,17 @@ server.get("/", (req, res) => {
 
 server.post("/useradd", (req, res) => {
 const data = req.body;
+  console.log("POST")
 
-fs.writeFile("data.json", JSON.stringify(data, null, 2))
-console.log("a")
+if (res.status(200))
+{
+  console.log("20")
+} 
+else {
+console.log("sdomjnjndf")
+  } 
+
+
 })
 
 
